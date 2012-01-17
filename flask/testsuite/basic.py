@@ -809,7 +809,7 @@ class BasicFunctionalityTestCase(FlaskTestCase):
         self.assert_equal(rv.data, 'Foo SubDomain')
 
     def test_exception_propagation(self):
-        def apprunner(configkey):
+        def apprunner(config_key):
             app = flask.Flask(__name__)
             @app.route('/')
             def index():
